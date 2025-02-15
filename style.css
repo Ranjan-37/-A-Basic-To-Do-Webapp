@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('todo_img.png');
+    background-size: cover;  /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+.container
+{
+    width:100%;
+    min-height: 100vh;
+    padding:10px;
+    backdrop-filter: blur(4px);
+}
+
+.To-Do
+{
+    max-width:540px;
+    /* background:white; */
+    margin:100px auto 20px;
+    padding: 30px 40px 70px;
+    border-radius: 10px;
+    height: 160px;
+    backdrop-filter: blur(50px);
+}
+
+.To-Do h2
+{
+    color:#002675;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+.row
+{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    background:white;
+    border-radius: 30px;
+    padding-left:20px;
+    margin-bottom:25px;
+}
+
+input
+{
+    flex:1;
+    border:none;
+    background:none;
+    background:transparent;
+    padding:18px;
+    font-weight:14px;
+    font-size:16px;
+}
+#add
+{
+    font-size: 16px;
+    border: none;
+    padding: 17.8px 25px;
+    position: relative;
+    right: 0%;
+    font-weight:bold;
+    background: aqua;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+ul li
+{
+    list-style:none;
+    font-size:17px;
+    padding: 12px 8px 12px 50px;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
+}
+ul li::before
+{
+    content:'';
+    position:absolute;
+    height:24px;
+    width:24px;
+    border-radius:50%;
+    background-image:url(unchecked.png);
+    background-size:cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked
+{
+    color:#555;
+    text-decoration:line-through;
+}
+
+ul li.checked::before
+{
+    background-image:url(checked.png);  
+    height:24px;
+    width:24px;
+}
+
+ul li span
+{
+    position:absolute;
+    right:0;
+    top:5px;
+    height:40px;
+    width:40px;
+    font-size:22px;
+    color: #555;
+    line-height:40px;
+    text-align: center;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+ul li span:hover{
+    background:#edeef0;
+}
+
+#list-container li {
+    background:white;
+    border-radius: 30px;
+    margin: 7px 0px;
+}
